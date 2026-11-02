@@ -1,0 +1,31 @@
+// Cada letra com uma palavra e uma figura ("Gê de Gato!" ao resgatar a letra).
+// A mesma lista da Lenda do Alfabeto.
+
+export const LETTERS: Record<string, { word: string; emoji: string }> = {
+  A: { word: 'Abelha', emoji: '🐝' },
+  B: { word: 'Bola', emoji: '⚽' },
+  C: { word: 'Cachorro', emoji: '🐶' },
+  D: { word: 'Dado', emoji: '🎲' },
+  E: { word: 'Elefante', emoji: '🐘' },
+  F: { word: 'Foca', emoji: '🦭' },
+  G: { word: 'Gato', emoji: '🐱' },
+  H: { word: 'Hipopótamo', emoji: '🦛' },
+  I: { word: 'Ilha', emoji: '🏝️' },
+  J: { word: 'Jacaré', emoji: '🐊' },
+  K: { word: 'Kiwi', emoji: '🥝' },
+  L: { word: 'Leão', emoji: '🦁' },
+  M: { word: 'Macaco', emoji: '🐒' },
+  N: { word: 'Navio', emoji: '🚢' },
+  O: { word: 'Ovo', emoji: '🥚' },
+  P: { word: 'Pato', emoji: '🦆' },
+  Q: { word: 'Queijo', emoji: '🧀' },
+  R: { word: 'Rato', emoji: '🐭' },
+  S: { word: 'Sapo', emoji: '🐸' },
+  T: { word: 'Tartaruga', emoji: '🐢' },
+  U: { word: 'Uva', emoji: '🍇' },
+  V: { word: 'Vaca', emoji: '🐄' },
+  W: { word: 'Waffle', emoji: '🧇' },
+  X: { word: 'Xícara', emoji: '☕' },
+  Y: { word: 'Yoga', emoji: '🧘' },
+  Z: { word: 'Zebra', emoji: '🦓' },
+};
