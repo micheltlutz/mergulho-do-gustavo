@@ -157,6 +157,19 @@ describe('mergulho', () => {
 });
 
 describe('bichos e fotos', () => {
+  it('o flash fotografa o bicho perto mesmo atrás do mergulhador', () => {
+    const dive = new Dive(WORDS[0], 4, ocean);
+    for (let i = 0; i < 120; i++) dive.step(DT);
+    const c = dive.creatures.find((x) => x.species.id === 'tartaruga')!;
+    dive.diver.x = c.x + 3;
+    dive.diver.y = c.y;
+    dive.diver.facing = 1; // de costas para a tartaruga
+    dive.events.splice(0);
+    dive.flash();
+    const photo = dive.events.find((e) => e.t === 'photo');
+    expect(photo && photo.t === 'photo' && photo.species.some((s) => s.id === 'tartaruga')).toBe(true);
+  });
+
   it('todas as 16 espécies aparecem no mar, na água', () => {
     const dive = new Dive(WORDS[0], 5, ocean);
     const ids = new Set(dive.creatures.map((c) => c.species.id));

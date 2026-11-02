@@ -14,7 +14,7 @@ export const START_X = 8;
 export const POP_RANGE = PHYS.radius + 0.75;
 export const RISE_SPEED = 3.2;
 export const REEL_TIME = 0.9;
-export const PHOTO_RANGE = 6.5;
+export const PHOTO_RANGE = 7.5;
 /** Sem achar letra por este tempo, a Bolinha dá uma dica. */
 export const HINT_EVERY = 12;
 const INTRO_TIME = 1.6;
@@ -189,10 +189,12 @@ export class Dive {
     this.flashCool = 0.8;
     this.events.push({ t: 'flash' });
     const d = this.diver;
+    // Vale qualquer bicho perto (em qualquer direção): o que ele vê na tela sai na foto.
+    // O da frente tem preferência para ser o "principal" do polaroide.
     const seen = this.creatures
       .map((c) => ({ c, dist: Math.hypot(c.x - d.x, c.y - d.y) - c.species.size * 0.4 }))
-      .filter(({ c, dist }) => dist < PHOTO_RANGE && (dist < 2.5 || (c.x - d.x) * d.facing > -1))
-      .sort((a, b) => a.dist - b.dist);
+      .filter(({ dist }) => dist < PHOTO_RANGE)
+      .sort((a, b) => a.dist - (a.c.x - d.x) * d.facing * 0.3 - (b.dist - (b.c.x - d.x) * d.facing * 0.3));
     if (!seen.length) return;
     const species = [...new Set(seen.map((s) => s.c.species))];
     this.events.push({ t: 'photo', species, best: seen[0].c });

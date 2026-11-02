@@ -24,7 +24,7 @@ Funciona deitado e em pé.
   - Pode pegar em qualquer ordem.
   - Ao encostar, a bolha estoura ("Letra gê! Gê de Gato!"), a letra sobe e o guincho da Mimi leva para o painel.
 - **Dicas da Bolinha:** "Gustavo, estou vendo a letra ésse perto do navio afundado!". Uma seta na borda da tela aponta para a letra mais perto quando ela não aparece.
-- **Botão da câmera:** o flash ilumina o mar e fotografa os bichos perto, com um polaroide e a voz dizendo o nome.
+- **Botão da câmera:** o flash ilumina o mar e fotografa os bichos perto (para qualquer lado), com um polaroide e a voz dizendo o nome.
   - **Álbum:** 16 bichos (peixe-palhaço, tartaruga, polvo, água-viva, baleia, tubarão-baleia…).
   - **Roupas:** a cada 4 bichos novos, abre uma roupa de mergulho.
 - **Lugares:**
